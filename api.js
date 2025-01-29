@@ -30,7 +30,7 @@ app.get('/users',(req,res)=>{
         database.collection("users").find({}).toArray().then(doc=>{
             res.send(doc)
             console.log("getting all users");
-            res.end()
+          
             
         })
     })
