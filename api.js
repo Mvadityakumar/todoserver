@@ -4,10 +4,10 @@ const mongoClient= require("mongodb").MongoClient
 
 require("dotenv").config();
 const app= express()
-// const port= process.env.PORT || 4000
-const constring="mongodb://localhost:27017"
+const port= process.env.PORT || 4000
+// const constring="mongodb://localhost:27017"
 
-// const constring = process.env.MONGO_URI;
+const constring = process.env.MONGO_URI;
 
 app.use(cors())
 // {
