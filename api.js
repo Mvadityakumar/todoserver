@@ -24,6 +24,19 @@ app.get("/", (req, res) => {
 });
 
 
+app.get('/aditya',(req,res)=>{
+    res.send("coming")
+})
+
+app.get('/mongo',(req,res)=>{
+    mongoClient.connect(constring).then(clientobj=>{
+        var database=clientobj.db("reactTodo")
+        database.collection("users").find({}).toArray().then(doc=>{
+            res.send(doc)
+        })
+    })
+})
+
 app.get('/users',(req,res)=>{
     mongoClient.connect(constring).then(clientobj=>{
         var database=clientobj.db("reactTodo")
