@@ -2,12 +2,12 @@ const express =require("express")
 const cors =require("cors")
 const mongoClient= require("mongodb").MongoClient
 
-require("dotenv").config();
+// require("dotenv").config();
 const app= express()
-const port= process.env.PORT || 4000
-// const constring="mongodb://localhost:27017"
+// const port= process.env.PORT || 4000
+const constring="mongodb://localhost:27017"
 
-const constring = process.env.MONGO_URI;
+// const constring = process.env.MONGO_URI;
 
 app.use(cors())
 // {
@@ -169,7 +169,7 @@ app.delete('/delete-user/:userid',(req,res)=>{
 })
 
 
-app.listen(port,()=>{
+app.listen(4000,()=>{
     console.log("server started");
     
 })
